@@ -4,8 +4,8 @@ import numpy as np
 model1234=pickle.load(open('model1234.pkl','rb'))
 
 
-def predict_sales('Item_Type_Combined','Item_Fat_Content','Item_Visibility','Item_MRP',
-               'Item_Type','Outlet_Establishment_Year','Outlet_Type','Item_Weight','Outlet_Identifier','Outlet_Size','Outlet_Location_Type'):
+def predict_sales(Item_Type_Combined,Item_Fat_Content,Item_Visibility,Item_MRP,
+               Item_Type,Outlet_Establishment_Year,Outlet_Type,Item_Weight,Outlet_Identifier,Outlet_Size,Outlet_Location_Type):
 
     input=np.array([[Item_Type_Combined,Item_Fat_Content,Item_Visibility,Item_MRP,
                Item_Type,Outlet_Establishment_Year,Outlet_Type,Item_Weight,Outlet_Identifier,Outlet_Size,Outlet_Location_Type]]).astype(np.float64)
