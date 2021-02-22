@@ -10,7 +10,7 @@ def predict_sales(Item_Type_Combined,Item_Fat_Content,Item_Visibility,Item_MRP,
     input=np.array([[Item_Type_Combined,Item_Fat_Content,Item_Visibility,Item_MRP,
                Item_Type,Outlet_Establishment_Year,Outlet_Type,Item_Weight,Outlet_Identifier,Outlet_Size,Outlet_Location_Type]]).astype(np.float64)
                
-    prediction=model1234.predict_proba(input)
+    prediction=model.predict_proba(input)
     pred='{0:.{1}f}'.format(prediction[0][0], 2)
     return float(pred)
 
@@ -55,61 +55,61 @@ def main():
 
     if Outlet_Size is 'Small': 
         Outlet_Size=0
-    else if Outlet_Size is 'Medium':
+    elif Outlet_Size is 'Medium':
         Outlet_Size=1
     else:
         Outlet_Size=2
 
     if Outlet_Location_Type is 'Tier 1': 
         Outlet_Location_Type=0
-    else if Outlet_Size is 'Tier 2':
+    elif Outlet_Size is 'Tier 2':
         Outlet_Location_Type=1
     else:
         Outlet_Location_Type=2
     
     if Outlet_Type is 'Grocery Store': 
         Outlet_Type=0
-    else if Outlet_Type is 'Supermarket Type1	':
+    elif Outlet_Type is 'Supermarket Type1	':
         Outlet_Type=1
-    else if Outlet_Type is 'Supermarket Type2	':
+    elif Outlet_Type is 'Supermarket Type2	':
         Outlet_Type=2
     else:
         Outlet_Type=3
 
     if Item_Type_Combined is 'Drinks': 
         Item_Type_Combined=0
-    else if Item_Type_Combined is 'Food':
+    elif Item_Type_Combined is 'Food':
         Outlet_Type=1
     else Item_Type_Combined is 'Non-Consumable':
         Item_Type_Combined=2
     
     if Item_Type is 'Dairy':
 	    Item_Type=4
-    else if Item_Type is 'Soft Drinks':
+    elif Item_Type is 'Soft Drinks':
 	    Item_Type=14
-    else if Item_Type is 'Meat':
+    elif Item_Type is 'Meat':
 	    Item_Type=10
-    else if Item_Type is 'Fruits and Vegetables':
+    elif Item_Type is 'Fruits and Vegetables':
 	    Item_Type=6
-    else if Item_Type is 'Household':
+    elif Item_Type is 'Household':
 	    Item_Type=9
-    else if Item_Type is 'Snack Foods':
+    elif Item_Type is 'Snack Foods':
 	    Item_Type=0
-    else if Item_Type is 'Baking Goods':
+    elif Item_Type is 'Baking Goods':
 	    Item_Type=13
-    else if Item_Type is 'Health and Hygiene':
+    elif Item_Type is 'Health and Hygiene':
 	    Item_Type=5
-    else if Item_Type is 'Hard Drinks':
+    elif Item_Type is 'Hard Drinks':
 	    Item_Type=4
-    else if Item_Type is 'Frozen Foods':
+    elif Item_Type is 'Frozen Foods':
 	    Item_Type=2
-    else if Item_Type is 'Breakfast':
+    elif Item_Type is 'Breakfast':
 	    Item_Type=8
-    else if Item_Type is 'Canned':
+    elif Item_Type is 'Canned':
 	    Item_Type=7
-    else if Item_Type is 'Breads':
+    elif Item_Type is 'Breads':
 	    Item_Type=3
-    else if Item_Type is 'Starchy Foods':
+    elif Item_Type is 'Starchy Foods':
 	    Item_Type=1
     else:
 	    Item_Type=11
