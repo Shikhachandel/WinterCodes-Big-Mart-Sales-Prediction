@@ -80,7 +80,7 @@ def main():
         Item_Type_Combined=0
     elif Item_Type_Combined is 'Food':
         Outlet_Type=1
-    else Item_Type_Combined is 'Non-Consumable':
+    else:
         Item_Type_Combined=2
     
     if Item_Type is 'Dairy':
