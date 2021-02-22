@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
-model1234=pickle.load(open('model1234.pkl','rb'))
+model=pickle.load(open('model.tar.xz/model.pkl','rb'))
 
 
 def predict_sales(Item_Type_Combined,Item_Fat_Content,Item_Visibility,Item_MRP,
